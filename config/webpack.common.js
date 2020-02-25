@@ -43,6 +43,15 @@ const common = {
           },
         ],
       },
+      {
+        test: /\.js?$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+        query: {
+          cacheDirectory: true,
+          presets: ['@babel/preset-react', "@babel/env"]
+        }
+      }
     ],
   },
   plugins: [
